@@ -1,0 +1,49 @@
+{
+    "name": "think/craft-live-chat",
+    "description": "Add live chat to your website that gives you complete control.",
+    "type": "craft-plugin",
+    "license": "proprietary",
+    "support": {
+        "email": "helpdesk@think.au",
+        "issues": "https://github.com/madebythink/craft-live-chat.git/issues?state=open",
+        "source": "https://github.com/madebythink/craft-live-chat.git",
+        "docs": "https://github.com/madebythink/craft-live-chat.git",
+        "rss": "https://github.com/madebythink/craft-live-chat.git/releases.atom"
+    },
+    "require": {
+        "php": ">=8.0.2",
+        "craftcms/cms": "^4.4.5"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\livechat\\": "src/"
+        }
+    },
+    "extra": {
+        "handle": "live-chat",
+        "name": "Live Chat",
+        "developer": "Think.au",
+        "documentationUrl": "https://github.com/madebythink/craft-live-chat.git",
+        "class": "think\\livechat\\LiveChat"
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
+
